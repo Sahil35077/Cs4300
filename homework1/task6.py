@@ -1,7 +1,11 @@
+import os
+
 def count_words(filename):
-    with open(filename, "r") as file:
+    """ Reads a file and returns the number of words in it. """
+    file_path = os.path.join(os.path.dirname(__file__), filename)
+    with open(file_path, "r") as file:
         return len(file.read().split())
 
-# Ensure the file exists before running
+# Ensure the function runs when executing task6.py
 if __name__ == "__main__":
-    print(count_words("task6_read_me.txt"))
+    print(f"Word count in task6_read_me.txt: {count_words('task6_read_me.txt')}")
