@@ -1,0 +1,40 @@
+{% extends 'bookings/base.html' %}
+
+{% block title %}Seat Booking{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center text-primary">💺 Select a Seat</h2>
+    
+    <table class="table table-striped mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th>Seat Number</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for seat in seats %}
+            <tr>
+                <td>{{ seat.seat_number }}</td>
+                <td>
+                    {% if seat.is_booked %}
+                        <span class="badge bg-danger">Booked</span>
+                    {% else %}
+                        <span class="badge bg-success">Available</span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if not seat.is_booked %}
+                        <a href="{% url 'confirm_booking' seat.id %}" class="btn btn-success">✔ Book Now</a>
+                    {% else %}
+                        <button class="btn btn-secondary" disabled>Unavailable</button>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

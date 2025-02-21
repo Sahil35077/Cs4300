@@ -1,0 +1,40 @@
+{% extends 'bookings/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Background -->
+<div class="hero-section text-center text-white">
+    <div class="overlay">
+        <div class="container">
+            <h1 class="display-4 fw-bold">🎬 Welcome to Movie Theater Booking</h1>
+            <p class="lead">Book your favorite movies effortlessly!</p>
+            <a href="{% url 'movie_list' %}" class="btn btn-lg btn-warning">🍿 View Movies</a>
+        </div>
+    </div>
+</div>
+
+<!-- Web Pages Section -->
+<div class="container mt-5">
+    <h2 class="text-center text-primary">📌 Web Pages</h2>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <a href="{% url 'movie_list' %}" class="btn btn-outline-primary">🎞 View Movies (Web Page)</a>
+        </li>
+    </ul>
+
+    <!-- API Endpoints Section -->
+    <h2 class="text-center text-success mt-4">🔗 API Endpoints</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <a href="/api/movies/" class="btn btn-outline-dark w-100 my-2">🎥 Movies API (JSON)</a>
+        </div>
+        <div class="col-md-4">
+            <a href="/api/seats/" class="btn btn-outline-dark w-100 my-2">💺 Seats API (JSON)</a>
+        </div>
+        <div class="col-md-4">
+            <a href="/api/bookings/" class="btn btn-outline-dark w-100 my-2">📆 Bookings API (JSON)</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
