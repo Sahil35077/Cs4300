@@ -2,7 +2,7 @@
 
 A Django-based web application for booking movie tickets, with a RESTful API.
 
-# 📂 Project Structure
+## 📂 Project Structure
 movie_theater_booking/
 │── bookings/             # Django app (models, views, serializers)
 │   ├── migrations/       # Database migrations
