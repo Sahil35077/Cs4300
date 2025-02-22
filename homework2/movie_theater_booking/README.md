@@ -1,4 +1,4 @@
-superuser access: username: sthapa
+superuser access: username: sthapa\n
                   password: 2215
 
 # 🎬 Movie Theater Booking System
