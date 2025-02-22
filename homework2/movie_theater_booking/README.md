@@ -1,6 +1,6 @@
-superuser access: username: sthapa\n
-                  password: 2215
-
+superuser access:  
+**Username:** sthapa  
+**Password:** 2215
 # 🎬 Movie Theater Booking System
 
 A Django-based web application for booking movie tickets, with a RESTful API.
