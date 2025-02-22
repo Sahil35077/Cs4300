@@ -1,3 +1,6 @@
+superuser access: username: sthapa
+                  password: 2215
+
 # 🎬 Movie Theater Booking System
 
 A Django-based web application for booking movie tickets, with a RESTful API.
@@ -43,6 +46,6 @@ Then visit http://127.0.0.1:8000/ in your browser.
 
 --------------------------------------------------------
 
-✅ How to Run Tests
+✅ How to Run Tests (13 tests are created)
 To verify the functionality, 
 run: python manage.py test bookings

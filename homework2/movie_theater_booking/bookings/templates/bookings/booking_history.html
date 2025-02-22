@@ -3,13 +3,16 @@
 {% block title %}Booking History{% endblock %}
 
 {% block content %}
-<h2>Your Booking History</h2>
-<ul class="list-group">
-    {% for booking in bookings %}
+<div class="container mt-4">
+    <h2 class="fw-bold">Your Booking History</h2>
+    <ul class="list-group">
+        {% for booking in bookings %}
         <li class="list-group-item">
-            <strong>{{ booking.movie.title }}</strong> - Seat {{ booking.seat.seat_number }} 
-            ({{ booking.booking_date }})
+            <strong>{{ booking.movie.title }}</strong> - Seat {{ booking.seat.seat_number }} ({{ booking.timestamp }})
         </li>
-    {% endfor %}
-</ul>
+        {% empty %}
+        <li class="list-group-item text-muted">No bookings found.</li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
